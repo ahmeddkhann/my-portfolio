@@ -20,49 +20,46 @@ export default function Home() {
     "I'm a passionate developer with a strong focus on creating scalable, maintainable, and efficient web applications. I'm always looking for ways to improve my skills and stay up-to-date with the latest technologies.";
 
   return (
-    <div className="bg-slate-950 min-h-screen pb-8">
+    <div className="bg-slate-950 min-h-screen pb-8 overflow-x-hidden">
       {/* Top navigation section */}
-      <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" fill="white" />
+      <Spotlight className="-top-40 left-0 md:left-20 md:-top-40" fill="white" />
 
-      {/* Main content section */}
-      <div className="flex justify-center mb-[-120px]">
-        {/* Left Image */}
-        <div className="mt-16 lg:w-[750px] lg:h-[750px] lg:ml-[100px]">
-          <Image src={myImg} alt="Profile Image" className="rounded-full" />
-        </div>
+{/* Main content section */}
+<div className="flex flex-col md:flex-col justify-center items-center md:items-center">
+  {/* Left Image */}
+  <div className="mt-16 lg:w-[750px] lg:h-[750px] lg:ml-[100px] md:w-[400px] md:h-[400px] sm:w-[300px] sm:h-[300px]">
+    <Image src={myImg} alt="Profile Image" className="rounded-full mx-auto" />
+  </div>
 
-        {/* Right Text Content */}
-        <div>
-          <div className="mt-20 lg:w-[70%] lg:mr-36">
-            <h1 className="text-gray-400 text-center mt-10 text-md">
-              We help you achieve your goals faster
-            </h1>
+  {/* Right Text Content */}
+  <div className="md:mt-32 lg:w-[70%] lg:mr-36 text-center md:text-center sm:text-center">
+    <h1 className="text-gray-400 mt-6 text-md md:text-3xl">
+      We help you achieve your goals faster
+    </h1>
 
-            {/* Text Generation Effect */}
-            <TextGenerateEffect
-              className={"text-gray-200 ml-16 text-4xl"}
-              words={`Hi, I'm Ahmed, a MERN Stack Developer based in Pakistan.  
-             `}
-              duration={1}
-              filter={false}
-              colors={["#00FFAB", "#FFC300"]}
-            />
+    {/* Text Generation Effect */}
+    <TextGenerateEffect
+      className={"text-gray-200 mt-4 lg:text-3xl md:text-4xl sm:text-xl"}
+      words={`Hi, I'm Ahmed, a MERN Stack Developer based in Pakistan.`}
+      duration={0}  
+      filter={false}
+      colors={["#00FFAB", "#FFC300"]}
+    />
 
-            <div>
-              <TextGenerateEffect
-                className={"text-gray-500 ml-16 text-xl"}
-                words={`${text}`}
-                duration={1}
-                filter={false}
-                colors={["#00FFAB", "#FFC300"]}
-              />
-            </div>
-          </div>
+    <div>
+      <TextGenerateEffect
+        className={"text-gray-500 mt-4 sm:text-xl md:text-md sm:text-md"}
+        words={`${text}`}
+        duration={0} 
+        filter={false}
+        colors={["#00FFAB", "#FFC300"]}
+      />
+    </div>
+  </div>
+</div>
 
-        </div>
-      </div>
+<BackgroundBeams />
 
-      <BackgroundBeams />
 
       <LampContainer>
         <motion.h1
@@ -73,33 +70,33 @@ export default function Home() {
             duration: 0.8,
             ease: "easeInOut",
           }}
-          className="mt-8 bg-gradient-to-br from-slate-300 to-slate-500 pt--4 bg-clip-text text-center lg:text-5xl font-medium tracking-tight text-transparent md:text-7xl"
+          className="mt-8 bg-gradient-to-br from-slate-300 to-slate-500 pt--4 bg-clip-text text-center lg:text-5xl md:text-4xl sm:text-3xl font-medium tracking-tight text-transparent"
         >
           Here are the Technologies I work with
         </motion.h1>
       </LampContainer>
 
       {/* Technologies Section */}
-      <div id="technologies" className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 min-h-screen gap-6 px-8 pb-8">
+      <div id="technologies" className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4 py-8">
         {technologies.map((tech, index) => (
           <div
             key={index}
             className="bg-slate-800 rounded-lg p-6 shadow-lg 
-           hover:shadow-xl hover:shadow-gray-400 hover:-translate-y-2 hover:-translate-x-4
-           border-2 border-transparent hover:border-white
-           transition-all duration-300 transform"
+             hover:shadow-xl hover:shadow-gray-400 hover:-translate-y-2 hover:-translate-x-4
+             border-2 border-transparent hover:border-white
+             transition-all duration-300 transform"
           >
             <Image 
-            src={tech.image}cd 
+            src={tech.image}
             width={50}
-             height={50}
-             alt="technologies Image"
-             className="mb-2"
-             />
-            <h2 className="text-lg font-semibold text-slate-200 mb-2">
+            height={50}
+            alt="technologies Image"
+            className="mb-2 mx-auto"
+            />
+            <h2 className="text-lg font-semibold text-slate-200 mb-2 text-center">
               {tech.title}
             </h2>
-            <p className="text-gray-400">{tech.description}</p>
+            <p className="text-gray-400 text-center">{tech.description}</p>
           </div>
         ))}
       </div>
@@ -144,11 +141,11 @@ export default function Home() {
                   width={400}
                   className="object-contain w-full h-64 rounded-lg"
                 />
-                <p className="text-xl font-semibold text-slate-200 mt-4 mb-2">
+                <p className="text-xl font-semibold text-slate-200 mt-4 mb-2 text-center md:text-left">
                   {project.title}
                 </p>
-                <p className="text-sm text-gray-400">{project.description}</p>
-                <p className="text-sm text-gray-400 mt-2">
+                <p className="text-sm text-gray-400 text-center md:text-[17px] md:text-left">{project.description}</p>
+                <p className="text-sm text-gray-400 mt-2 text-center md:text-left">
                   {project.technologies.join(", ")}
                 </p>
                 <Meteors number={40} />
@@ -158,34 +155,27 @@ export default function Home() {
         </div>
       </div>
 
-            {/* Contact Section */}
+      {/* Contact Section */}
+      <div className="h-96 relative w-full overflow-hidden bg-slate-900 flex flex-col items-center justify-center rounded-lg">
+        <div className="absolute inset-0 w-full h-full bg-slate-900 z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
 
-
-        <div className="h-96 relative w-full overflow-hidden bg-slate-900 flex flex-col items-center justify-center rounded-lg">
-      <div className="absolute inset-0 w-full h-full bg-slate-900 z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
- 
-      <Boxes />
-      <h1 className={cn("md:text-4xl text-xl text-white relative z-20 mb-4")}>
-        Reach me out through
-      </h1>
-    <div className="flex flex-wrap gap-x-20 mt-5">
-    {contacts.map((contact) => (
-       <Link href={contact.link} key={contact.id}>
-       <span id={contact.id} className="text-center mt-2 text-neutral-300 gap-y-4 flex flex-col relative z-20">
-         <span>
-         <Image src={contact.image}
-         width={50}
-         height={50}
-         alt="contact images"/>
-         <h1 className="text-center mt-5"> {contact.text}</h1>
-         </span>
-       </span>
-       </Link>
-     ))}
-    </div>
-    </div>
-        
+        <Boxes />
+        <h1 className={cn("md:text-4xl text-xl text-white relative z-20 mb-4")}>
+          Reach me out through
+        </h1>
+        <div className="flex flex-wrap gap-x-20 mt-5 ">
+          {contacts.map((contact) => (
+            <Link href={contact.link} key={contact.id}>
+              <span id={contact.id} className="text-center mt-2 sm:ml-4 text-neutral-300 gap-y-4 flex flex-col relative z-20">
+                <span>
+                  <Image src={contact.image} width={50} height={50} alt="contact images" />
+                  <h1 className="text-center mt-5"> {contact.text}</h1>
+                </span>
+              </span>
+            </Link>
+          ))}
+        </div>
       </div>
-  
+    </div>
   );
 }
