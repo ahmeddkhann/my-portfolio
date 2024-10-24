@@ -28,21 +28,12 @@ const Hero = () => {
     {/* Text Generation Effect */}
     <TextGenerateEffect
       className={"text-gray-200 mt-4 text-4xl md:text-2xl sm:text-2xl"}
-      words={`Hi, I'm Ahmed, a MERN Stack Developer based in Pakistan.`}
+      words={`Hi, I'm Ahmed, a MERN Stack Developer based in Pakistan. ${text}`}
       duration={0}  
       filter={false}
       colors={["#00FFAB", "#FFC300"]}
     />
 
-    <div>
-      <TextGenerateEffect
-        className={"text-gray-500 mt-4 text-xl md:text-md sm:text-md"}
-        words={`${text}`}
-        duration={0} 
-        filter={false}
-        colors={["#00FFAB", "#FFC300"]}
-      />
-    </div>
   </div>
 </div>
 
