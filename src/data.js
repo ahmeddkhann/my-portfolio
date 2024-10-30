@@ -54,8 +54,17 @@ export const technologies = [
 ];
 
 export const Projects = [
+  {
+    id: 1,
+    title: "LearnXplorers Academy",
+    description:
+      "LearnXplorers Academy is an online platform where you can learn about different subjects for your exams. It is user friendly and easy to use.",
+    technologies: ["Html", "Tailwind CSS", "Javascript", "Next.Js", "MongoDb"],
+    image: "/academy.png",
+    link: "https://learn-xplorers-academy.vercel.app/",
+  },
     {
-      id: 1,
+      id: 2,
       title: "EverCare Medical Centre",
       description:
         "EverCare Medical Centre is a web application that allows patients to book appointments, view their medical history, and communicate with their healthcare providers.",
@@ -64,7 +73,7 @@ export const Projects = [
       link: "https://hospital-management-two-tau.vercel.app/",
     },
     {
-      id: 2,
+      id: 3,
       title: "Iphone 15 Pro",
       description:
         "The iPhone 15 Pro website showcases Apple's latest flagship device, featuring stunning visuals, detailed product specifications, and a seamless user interface. ",
