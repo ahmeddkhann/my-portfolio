@@ -63,8 +63,17 @@ export const Projects = [
     image: "/academy.png",
     link: "https://learn-xplorers-academy.vercel.app/",
   },
+  {
+    id: 2,
+  title: "Infinities Solutions",
+  description:
+    "A Software Company established in Nov, 2024, specializing in web development and data Visualization aim to deliver high-quality software products. ",
+  technologies: ["HTML", "Tailwind CSS", "JavaScript", "Next.js"],
+  image: "/techCompany.png", 
+  link: "https://infinities-solutions.vercel.app/"
+  },
     {
-      id: 2,
+      id: 3,
       title: "EverCare Medical Centre",
       description:
         "EverCare Medical Centre is a web application that allows patients to book appointments, view their medical history, and communicate with their healthcare providers.",
@@ -73,7 +82,7 @@ export const Projects = [
       link: "https://hospital-management-two-tau.vercel.app/",
     },
     {
-      id: 3,
+      id: 4,
       title: "Iphone 15 Pro",
       description:
         "The iPhone 15 Pro website showcases Apple's latest flagship device, featuring stunning visuals, detailed product specifications, and a seamless user interface. ",
